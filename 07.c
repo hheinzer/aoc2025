@@ -10,7 +10,7 @@ typedef struct {
     long row, col;
 } Vector;
 
-Vector find_start(const char *map, long rows, long cols)
+static Vector find_start(const char *map, long rows, long cols)
 {
     for (long i = 0; i < rows; i++) {
         for (long j = 0; j < cols; j++) {
@@ -22,7 +22,7 @@ Vector find_start(const char *map, long rows, long cols)
     return (Vector){-1, -1};
 }
 
-long bfs(Vector start, const char *map, long rows, long cols)
+static long bfs(Vector start, const char *map, long rows, long cols)
 {
     long count = 0;
     bool seen[ROWS][COLS] = {0};
@@ -47,7 +47,7 @@ long bfs(Vector start, const char *map, long rows, long cols)
     return count;
 }
 
-long dfs(Vector cur, const char *map, long rows, long cols)
+static long dfs(Vector cur, const char *map, long rows, long cols)
 {
     static long cache[ROWS][COLS] = {0};
     if (cur.row >= rows || cur.col < 0 || cols <= cur.col) {

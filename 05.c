@@ -9,7 +9,7 @@ typedef struct {
     long beg, end;
 } Range;
 
-int cmp_range(const void *lhs_, const void *rhs_)
+static int cmp_range(const void *lhs_, const void *rhs_)
 {
     const Range *lhs = lhs_;
     const Range *rhs = rhs_;

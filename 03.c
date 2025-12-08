@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-long joltage(const char *line, long num)
+static long joltage(const char *line, long num)
 {
     long tot = strlen(line) - 1;
     long drop = tot - num;

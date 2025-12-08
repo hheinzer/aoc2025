@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-bool is_invalid(const char *str, long num, long len)
+static bool is_invalid(const char *str, long num, long len)
 {
     for (long i = num; i < len; i += num) {
         if (memcmp(str, &str[i], num) != 0) {

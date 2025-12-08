@@ -6,7 +6,7 @@
 enum { ROWS = 135 };
 enum { COLS = 135 };
 
-long adjacent(long row, long col, const char *grid, long rows, long cols)
+static long adjacent(long row, long col, const char *grid, long rows, long cols)
 {
     assert(grid[(row * cols) + col] == '@');
     long num = 0;
